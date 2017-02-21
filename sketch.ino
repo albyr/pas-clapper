@@ -1,6 +1,8 @@
-int analogValue;        // This is where we'll store our audio to digital value.  More sound = higher number
-const int LED = 13;     // Set up the LED indicator
-boolean toggle = false; // setup a boolean function called toggle which will help us to choose which mode we're in
+// Define variables
+int analogValue;        // This is where we'll store our audio to digital value. Larger value indicates louder sound.
+const int LED = 13;     // Set up the LED indicator. We can use const because it's not going to change.
+boolean toggle = false; // This boolean is going to have to go, because we're going to have more than one mode.
+int modeToggle = 0;     // This is how we'll decide which mode we're in.
 
 // Setup
 void setup() {
