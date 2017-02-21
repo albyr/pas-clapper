@@ -1,5 +1,5 @@
 int analogValue;        // This is where we'll store our audio to digital value.  More sound = higher number
-#define LED 13          // Set up the LED indicator
+const int LED = 13;     // Set up the LED indicator
 boolean toggle = false; // setup a boolean function called toggle which will help us to choose which mode we're in
 void setup() {
   pinMode(LED,OUTPUT);  // Pin#2 should be conencted to an LED through a 300-600 ohm resistor    
