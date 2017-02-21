@@ -1,11 +1,14 @@
 int analogValue;        // This is where we'll store our audio to digital value.  More sound = higher number
 const int LED = 13;     // Set up the LED indicator
 boolean toggle = false; // setup a boolean function called toggle which will help us to choose which mode we're in
+
+// Setup
 void setup() {
   pinMode(LED,OUTPUT);  // Pin#2 should be conencted to an LED through a 300-600 ohm resistor    
   Serial.begin(9600);   // This is optional - It just helps you to calibrate sensitivity after the fact
 }
 
+// Main
 void loop() {
   if (toggle == false) {           // When you power up your arduino, boolean "toggle" is set to false, so the following section of code will commence. The "ELSE" is ignored for now.
       digitalWrite(LED,LOW);       // Turn the LED off
@@ -26,3 +29,5 @@ void loop() {
     }
   }
 }
+
+// Functions will go here.
