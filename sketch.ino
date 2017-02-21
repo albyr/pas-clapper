@@ -12,6 +12,21 @@ void setup() {
 
 // Main
 void loop() {
+  // Take a "volume reading".
+  analogueValue = analogRead(0);
+  // If the volume is loud enough ...
+  if (analogValue > 8) {
+    // then increment the modeToggle variable.
+    modeToggle = modeToggle + 1;
+    // Pause for 200ms (I can't remember why we do this).
+    delay(200);
+  }
+  // Print what mode we're in.
+  Serial.print("Mode ");
+  Serial.println(modeToggle);
+  
+  // Clever code that divides the modeToggle by three to work out what mode it's in goes here.
+  
   if (toggle == false) {           // When you power up your arduino, boolean "toggle" is set to false, so the following section of code will commence. The "ELSE" is ignored for now.
       digitalWrite(LED, LOW);      // Turn the LED off
       analogValue = analogRead(0); // Take an analog reading from A0 line.  No sounds should be offer a returned value of "0"
