@@ -18,6 +18,8 @@ void loop() {
   if (analogValue > 8) {
     // then increment the modeToggle variable.
     modeToggle = modeToggle + 1;
+    // Prevent the modeToggle value from exceeding range 0, 1, 2
+    modeToggle = modeToggle % 3; 
     // Pause for 200ms (I can't remember why we do this).
     delay(200);
   }
