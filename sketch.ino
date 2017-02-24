@@ -13,7 +13,7 @@ void setup() {
 // Main
 void loop() {
   // Take a "volume reading".
-  analogueValue = analogRead(0);
+  analogValue = analogRead(0);
   // If the volume is loud enough ...
   if (analogValue > 8) {
     // then increment the modeToggle variable.
