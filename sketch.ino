@@ -26,4 +26,14 @@ void loop() {
   // Print what mode we're in.
   Serial.print("Mode ");
   Serial.println(modeToggle);
+  // Do different things based on modeToggle value
+  if (modeToggle = 0) {
+    // Mode 1 (this is the first, starting mode)
+  }
+  else if (modeToggle = 1) {
+    // Mode 2 (this will be active when we clap for the first time)
+  }
+  else {
+    // Mode 3 (this will be active after two claps)
+  }
 }
